@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "3b3b9258-31fa-4b06-b053-81ba1843afbd",
+		"name": "Chai Assertions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Array Chai Assertions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Your test name\", function () {",
+							"    pm.expect(102).to.eql(100, \"Must equal 100\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "example.com",
+					"host": [
+						"example",
+						"com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Other Assertions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"your test name\", function () {",
+							"  ",
+							"    //Note Assertions can take a value and a text",
+							"    pm.expect([]).to.be.empty;",
+							"    pm.expect([1,2,3]).to.contain(2);",
+							"    pm.expect(2).to.be.oneOf([1,2,3,4,5,6]);",
+							"    pm.expect([1,2,3]).to.include(3, \"Include whats in the array\");",
+							"    pm.expect([].length).to.eql(0);",
+							"    pm.expect(true).to.be.true;",
+							"    pm.expect(null).to.be.null;",
+							"    pm.expect(undefined).to.be.undefined;",
+							"    pm.expect('John Doe').to.match(/John/);",
+							"     pm.expect('John Doe').to.match(/^John/);",
+							"     // Note that the sign (^) in front of John means that it starts with John",
+							"    //Store something in a variable. You can only substring  variable and store in another variable. if not it will say undefined substring. Then print the new variable ",
+							"    var Jay = \"Johnny\"",
+							"    var Jay1 = Jay.substring(0,4);",
+							"    console.log(Jay1);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "example.com",
+					"host": [
+						"example",
+						"com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "let a eql b",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"your test name\", function () {",
+							"    let a = {",
+							"        \"name\": \"John\"",
+							"    };",
+							"    let b = {",
+							"        \"name\": \"John\"",
+							"    };",
+							"    pm.expect(a).to.eql(b);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "example.com",
+					"host": [
+						"example",
+						"com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chai assertion with Error test to be displayed",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Your test name\", function () {",
+							"    pm.expect(100).to.eql(100, \"Must equal 100\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "example.com",
+					"host": [
+						"example",
+						"com"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
