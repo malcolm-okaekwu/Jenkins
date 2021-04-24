@@ -121,7 +121,7 @@
 					"script": {
 						"exec": [
 							"pm.test(\"Your test name\", function () {",
-							"    pm.expect(101).to.eql(100, \"Must equal 100\");",
+							"    pm.expect(100).to.eql(100, \"Must equal 100\");",
 							"});"
 						],
 						"type": "text/javascript"
